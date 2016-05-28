@@ -55,7 +55,7 @@ public class SocketService extends Service {
 
     private void processClient(Socket client) {
         try {
-            //true as auto flush
+            //true for auto flush
             PrintWriter pw = new PrintWriter(new BufferedWriter(new
                     OutputStreamWriter(client.getOutputStream())), true);
             pw.println("Msg get");
@@ -67,6 +67,5 @@ public class SocketService extends Service {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }

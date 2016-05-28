@@ -15,7 +15,7 @@ import android.util.Log;
  */
 public class BinderService extends Service {
 
-    IByBinderInterface.Stub byBinderInterface = new IByBinderInterface.Stub() {
+    private IByBinderInterface.Stub byBinderInterface = new IByBinderInterface.Stub() {
         @Override
         public void add(int x, int y) throws RemoteException {
             int result = x + y;

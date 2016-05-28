@@ -25,14 +25,13 @@ public class ByFileActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_by_file);
-        Msg msg = readFromFil();
+        Msg msg = readFromFile();
         ((TextView) findViewById(R.id.tv_file_msg)).setText(msg.title + msg.content);
     }
 
-    private Msg readFromFil() {
+    private Msg readFromFile() {
         File file = new File(Environment.getExternalStorageDirectory(), "myMsg");
         if (!file.exists()) return null;
-        Log.d("IPC_DEMO", file.getAbsolutePath());
         ObjectInputStream ois = null;
         Msg msg = null;
         try {

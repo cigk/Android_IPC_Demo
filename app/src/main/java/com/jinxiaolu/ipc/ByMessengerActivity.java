@@ -36,7 +36,7 @@ public class ByMessengerActivity extends AppCompatActivity {
 
     private Messenger remoteMessenger;
 
-    ServiceConnection conn = new ServiceConnection() {
+    private ServiceConnection conn = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             remoteMessenger = new Messenger(service);

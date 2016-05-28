@@ -19,9 +19,9 @@ import android.view.View;
  */
 public class ByBinderActivity extends AppCompatActivity {
 
-    IByBinderInterface binder;
+    private IByBinderInterface binder;
 
-    ServiceConnection conn = new ServiceConnection() {
+    private ServiceConnection conn = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             binder = IByBinderInterface.Stub.asInterface(service);
